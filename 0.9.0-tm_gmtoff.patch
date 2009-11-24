@@ -1,0 +1,20 @@
+--- origsrc/pidgin-twitter-0.9.0/twitter_api.c	2009-10-18 10:11:39.000000000 -0500
++++ src/pidgin-twitter-0.9.0/twitter_api.c	2009-11-22 14:29:40.330637100 -0600
+@@ -107,7 +107,7 @@ read_timestamp(const char *str, struct t
+     res->tm_min  = minute;
+     res->tm_sec  = second;
+     res->tm_year = year - 1900;
+-#ifndef _WIN32
++#if !defined(_WIN32) && !defined(__CYGWIN__)
+     int offset   = atoi(time_offset);
+     res->tm_gmtoff = -1 * (60 * 60 * offset / 100);
+ #endif
+@@ -130,7 +130,7 @@ parse_status(xmlNode *status, status_t *
+                 memset(&res, 0x00, sizeof(struct tm));
+                 read_timestamp(str, &res);
+                 tzset();
+-#ifdef _WIN32
++#if defined(_WIN32) || defined(__CYGWIN__)
+                 st->time = mktime(&res) - timezone;
+ #else
+                 st->time = mktime(&res) + res.tm_gmtoff;

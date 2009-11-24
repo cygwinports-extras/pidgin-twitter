@@ -1,0 +1,6 @@
+category: Net
+requires: libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libpurple0 libxml2 pidgin
+sdesc: "Pidgin microblog plugin"
+ldesc: "pidgin-twitter is a Pidgin plugin to help posting and reading 
+micro blogs such as Twitter. Currently, pidgin-twitter supports Twitter, 
+Wassr, identi.ca, jisko and friendfeed."

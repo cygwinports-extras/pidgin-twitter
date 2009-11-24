@@ -1,0 +1,57 @@
+pidgin-twitter
+------------------------------------------
+pidgin-twitter is a Pidgin plugin to help posting and reading micro
+blogs such as Twitter. Currently, pidgin-twitter supports Twitter,
+Wassr, identi.ca, jisko and friendfeed.
+
+Runtime requirements:
+  cygwin-1.7.0-64
+  libgcc1-4.3.4-1
+  libgdk_pixbuf2.0_0-2.18.3-1
+  libglib2.0_0-2.22.2-1
+  libgtk2.0_0-2.18.3-1
+  libpurple0-2.6.3-1
+  libxml2-2.7.4-1
+  pidgin-2.6.3-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.11-1.11-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.honeyplanet.jp/pidgin-twitter/
+
+Canonical download:
+  http://www.honeyplanet.jp/pidgin-twitter/#release_files
+
+-------------------------------------------
+
+Build instructions:
+  unpack pidgin-twitter-0.9.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./pidgin-twitter-0.9.0-X.cygport all
+
+This will create:
+  /usr/src/pidgin-twitter-0.9.0-X-src.tar.bz2
+  /usr/src/pidgin-twitter-0.9.0-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.9.0-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
